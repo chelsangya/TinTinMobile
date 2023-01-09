@@ -21,9 +21,9 @@ class _HomeScreenState extends State<HomeScreen> {
                child: Column(
                  crossAxisAlignment: CrossAxisAlignment.start,
                    children: <Widget>[
-                     Text("Welcome to", style: GoogleFonts.poppins(
-                       fontSize: 16,
-                       fontWeight: FontWeight.w500,
+                     Text("TinTin", style: GoogleFonts.poppins(
+                       fontSize: 22,
+                       fontWeight: FontWeight.w600,
                          color:Colors.black),
                    ),
                  Text("The efficient way to find books", style: GoogleFonts.poppins(

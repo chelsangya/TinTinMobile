@@ -39,18 +39,29 @@ class _RegisterScreenState extends State<RegisterScreen> {
             //     )
             //   ],
             // ),
-            Column(
-              children: [
-                Center(
-                  child: Container(
-                    padding: EdgeInsets.only(top: 10,bottom: 10),
-                    child: ElevatedButton(onPressed: (){
-                      Navigator.of(context).pushReplacementNamed("/login");
-                    }, child:
-                    Text("Already have an account")),
-                  ),
-                ),
-              ],
+            InkWell(
+              child: Column(
+                children: [
+                  Padding(
+                      padding:EdgeInsets.only(top: 10,bottom: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                      Text("Already have an account? Login here",
+                        style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color:Colors.black),
+                    ),
+                ]
+                    ),
+
+                  )
+                ],
+              ),
+              onTap: (){
+                Navigator.of(context).pushReplacementNamed("/login");
+              },
             ),
             Container(
               margin: EdgeInsets.only(top:5),
@@ -77,7 +88,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             fontSize: 12,
                             color: Colors.grey
                         ),
-                        suffixIcon: Icon(Icons.accessibility_outlined)),
+                        suffixIcon: Icon(Icons.person_outlined)),
                   ),
                 ],
               ),
@@ -107,7 +118,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             fontSize: 12,
                             color: Colors.grey
                         ),
-                        suffixIcon: Icon(Icons.assessment_outlined)),
+                        suffixIcon: Icon(Icons.person_outline_outlined)),
                   ),
                 ],
               ),
@@ -234,9 +245,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             Center(
               child: Container(
+                width: 320,
                 padding: EdgeInsets.only(top:10),
-                child: ElevatedButton(onPressed: (){}, child:
-                Text("Register")),
+                child: ElevatedButton(onPressed: (){
+
+                }, child:
+                Text("Register"),
+                    style: ButtonStyle(
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))))),
               ),
             ),
 
