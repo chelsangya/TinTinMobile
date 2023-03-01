@@ -1,6 +1,6 @@
 {
-    "name": "tintin",
-    "short_name": "tintin",
+    "name": "n_baz",
+    "short_name": "n_baz",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
